@@ -1,6 +1,8 @@
 # Appify
 
-Generate macOS `.app` from Swift Package `.executable`.
+Generate simple macOS `.app` from Swift Package `.executable`.
+
+Could be useful for status bar app based only on Swift Package Manager.
 
 ## How to
 
@@ -21,7 +23,8 @@ let package = Package(
         name: "Executable",
             dependencies: ["Appify", ...]
         )
-    ]
+    ],
+    ...
 )
 ```
 
@@ -32,8 +35,9 @@ In `main.swift` just add one line before your app starting code
 
 ```swift
 
-Appify.run()
+Appify.run() // here the code, will exit app if the first command line argument is appify
 
+// your app code
 let app: NSApplication = .shared
 app.delegate = xxx
 app.run()
@@ -46,7 +50,7 @@ then you could run
 my-executable appify
 ```
 
-A `my-executable.app` will be created near `my-exectable`
+A `my-executable.app` will be created near the `my-exectable`
 
 ## Improvements
 
