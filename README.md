@@ -43,12 +43,14 @@ app.run()
 then you could run
 
 ```bash
-my-exectable appify
+my-executable appify
 ```
 
-A `my-exectable.app` will be create near `my-exectable`
+A `my-executable.app` will be created near `my-exectable`
 
 ## Improvements
 
 - [ ] Create plist files with many input from command line parameters or configuration file.
+    - [ ] App icon
+    - [ ] Status bar app or not
 
